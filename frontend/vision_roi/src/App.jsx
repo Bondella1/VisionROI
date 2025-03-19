@@ -3,30 +3,42 @@ import './App.css';
 import Home from './home';
 import NavBar from './navbar';
 import Login from './Login';
+import ProjectData from './ProjectData';
 
 // wrap app with MsalProvider
-import {MsalProvider} from "@azure/msal-react";
+import {MsalProvider, useIsAuthenticated, useAccount} from "@azure/msal-react";
 import { PublicClientApplication } from '@azure/msal-browser';
 import { msalConfig } from './authConfig';
 
-const App = () => {
+const msalInstance = new PublicClientApplication(msalConfig);
 
+const AppContent = () => {
   const [showLogin, setShowLogin] = useState(false);
-  const msalInstance = new PublicClientApplication(msalConfig);
-
+  const isAuthenticated = useIsAuthenticated();
+  const account = useAccount();
 
   return (
-    
-    <MsalProvider instance={msalInstance}>
-      <div className="App">
-        <NavBar onLoginClick={() => setShowLogin(true)} />
+    <div className="App">
+        <NavBar 
+        onLoginClick={() => setShowLogin(true)} 
+        isAuthenticated={isAuthenticated} 
+        username={account?.idTokenClaims?.preferred_username || account?.name} 
+        onLogout={() => msalInstance.logoutPopup()}
+        />
         <div className='content'>
-          {showLogin ? <Login /> : <Home />} 
+          {isAuthenticated ? <ProjectData /> : showLogin ? <Login /> : <Home />}
         </div>
-      </div>
+    </div>
+  );
+};
+
+const App = () => {
+  return (
+    <MsalProvider instance={msalInstance}>
+      <AppContent />
     </MsalProvider>
     
   );
-}
+};
 
-export default App
+export default App;
