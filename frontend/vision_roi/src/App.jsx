@@ -18,7 +18,6 @@ const App = () => {
   return (
     
     <MsalProvider instance={msalInstance}>
-      
       <div className="App">
         <NavBar onLoginClick={() => setShowLogin(true)} />
         <div className='content'>

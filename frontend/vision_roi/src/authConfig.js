@@ -1,6 +1,4 @@
-// configuration file
-// may need to add clientId and tenant id in gitignore
-
+// Configureation file
 export const msalConfig = {
     auth : {
 
