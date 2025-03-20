@@ -20,15 +20,18 @@ const AppContent = () => {
 
   return (
     <div className="App">
+        
         <NavBar 
         onLoginClick={() => setShowLogin(true)} 
         isAuthenticated={isAuthenticated} 
         username={account?.idTokenClaims?.preferred_username || account?.name} 
         onLogout={() => msalInstance.logoutPopup()}
         />
+        
         <div className='content'>
-          {isAuthenticated ? <ProjectData /> : showLogin ? <Login /> : <Home />}
+          {isAuthenticated ? <ProjectData /> : showLogin ? <Login /> : <Home onLoginClick= {() => setShowLogin(true)}/>}
         </div>
+        
     </div>
   );
 };
