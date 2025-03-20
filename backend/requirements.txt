@@ -20,3 +20,4 @@ pandas
 requests
 scikit-learn
 joblib
+flask-cors

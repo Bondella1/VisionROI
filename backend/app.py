@@ -99,9 +99,9 @@ def display_project_details(selected_id):
 def add_security_headers(response):
     response.headers['Content-Security-Policy'] = (
         "default-src 'self'; frame-resources 'self' http://react-domain"
-    )
+    ) 
 
 if __name__ == '__main__':
-    app.run(debug=True, host="10.250.44.13", port=8050)
+    app.run(debug=True, host="0.0.0.0", port=8050)
 
 CORS(app.server, origins=["react-domain"])
