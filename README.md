@@ -13,3 +13,11 @@ The MSAL library supports React 18, not 19. Hence we uninstalled React 19 and in
  - Then open terminal -> enter 'npm run dev' without quotes
  - use Crtl and click on localhost link to open
  - use Crtl+C to terminate session
+
+# To login
+- To login with Microsoft, your user and pass needs to be registered in Azure -> Microsoft Entra ID -> VisionROI -> Users
+- Once you login, you should be able to view Project Data and have access to visuals and AI features.
+
+# To improve in future
+- Implement multifacet sign in -> work and school emails.
+- Add hierarchies, where based on your role, you are restricted or have access on viewing certain info.
