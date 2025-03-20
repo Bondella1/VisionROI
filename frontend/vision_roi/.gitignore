@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # Sensitive info ignore .env file
-.env
+.env.env
