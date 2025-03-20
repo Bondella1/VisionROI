@@ -1,7 +1,7 @@
-import React from 'react';
-
-const DashEmbed = () => {
-  const dashUrl = import.meta.env.VITE_DASH_APP_URL; // Vite uses import.meta.env
+const DashDashboard = () => {
+  // Replace with the public URL provided by Codespaces for port 8050.
+  
+  const dashUrl = import.meta.env.VITE_DASH_APP_URL;
   return (
     <div style={{ width: '100%', height: '100vh' }}>
       <iframe
@@ -13,5 +13,6 @@ const DashEmbed = () => {
   );
 };
 
-export default DashEmbed;
+export default DashDashboard;
+
 
