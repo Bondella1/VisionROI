@@ -11,7 +11,7 @@ const NavBar = ({ onLoginClick, isAuthenticated, username, onLogout }) => {
               <button onClick={onLogout} className="logout-button">Logout</button>
           </div>
         ) : (
-          <button className="login-button" onClick={onLoginClick}>Login or Create Account</button>
+          <button className="login-button" onClick={onLoginClick}>Login</button>
         )}
       </div>
     </div>

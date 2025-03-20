@@ -1,74 +1,100 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0; /* Remove padding to avoid extra space */
-  text-align: left; /* Align text to the left */
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  color: black;
-  background-color: #9dc2e8;
+  padding: 0;
+  text-align: left;
+  font-family: 'Inter', Avenir, Helvetica, Arial, sans-serif;
+  color: #222;
+  background: #eef4f9;
 }
 
 body {
   margin: 0;
-  display: block; /* Change from flex to block */
+  display: block;
   min-width: 320px;
   min-height: 100vh;
 }
+
 /* Navbar Container */
 .navbar {
   display: flex;
-  justify-content: space-between; /* Space between title and links */
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem; /* Add padding on the sides */
-  background-color: #ffffff; /* Change to your preferred background color */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
-  position: sticky; /* Make the navbar stick to the top */
-  top: 0; /* Stick to the top of the page */
-  z-index: 1000; /* Ensure it stays above other content */
-  width: 100%; /* Full width */
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #003580, #0056b3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Title on the Left */
 .navbar-title {
-  color: #333333; /* Change to your preferred text color */
-  font-size: 1.5rem; /* Adjust the font size */
-  margin: 0; /* Remove default margin */
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
 }
 
 /* Links and Button on the Right */
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 1rem; /* Space between Home link and Login button */
+  gap: 1.2rem;
 }
 
 .navbar-links a {
   text-decoration: none;
-  color: #333333; /* Change to your preferred link color */
+  color: #ffffff;
   font-size: 1rem;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .navbar-links a:hover {
-  color: #007bff; /* Change to your preferred hover color */
+  color: #ffc107;
 }
 
 /* Login Button */
 .login-button {
-  padding: 0.5rem 1rem;
-  background-color: #007bff; /* Change to your preferred button color */
-  color: #ffffff; /* Button text color */
+  padding: 0.6rem 1.2rem;
+  background: #ffc107;
+  color: #003580;
   border: none;
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 6px;
   font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .login-button:hover {
-  background-color: #0056b3; /* Darker shade for hover effect */
+  background: #ffb300;
+  transform: scale(1.05);
 }
 
+/* Main Content */
 .content {
   padding: 2rem;
+  color: #333;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      padding: 1rem;
+  }
+  
+  .navbar-links {
+      flex-direction: column;
+      gap: 0.8rem;
+  }
+
+  .login-button {
+      width: 100%;
+      text-align: center;
+  }
 }

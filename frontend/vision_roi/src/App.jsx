@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css';
+import './Login.css';
 import Home from './home';
 import NavBar from './navbar';
 import Login from './Login';
