@@ -1,3 +1,4 @@
+/* general background and navbar */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -6,6 +7,8 @@
   font-family: 'Inter', Avenir, Helvetica, Arial, sans-serif;
   color: #222;
   background: #eef4f9;
+  /* added */
+  transition: all 0.3s ease-in-out;
 }
 
 body {
@@ -13,6 +16,8 @@ body {
   display: block;
   min-width: 320px;
   min-height: 100vh;
+  /* added */
+  
 }
 
 /* Navbar Container */
@@ -20,14 +25,18 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 10px;
   background: linear-gradient(90deg, #003580, #0056b3);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
-  width: 100%;
-  transition: all 0.3s ease-in-out;
+  /* transition: all 0.3s ease-in-out; */
+}
+
+/* added */
+.navbar:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Title on the Left */
@@ -57,7 +66,7 @@ body {
   color: #ffc107;
 }
 
-/* Login Button */
+/* Login Button in navbar*/
 .login-button {
   padding: 0.6rem 1.2rem;
   background: #ffc107;
@@ -98,3 +107,4 @@ body {
       text-align: center;
   }
 }
+
