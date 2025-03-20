@@ -24,3 +24,8 @@ The MSAL library supports React 18, not 19. Hence we uninstalled React 19 and in
 
 # Using Plotly-dash to display Data Visualizations
 - The code for this is found in app.py 
+
+# Tasks for Tahia
+- In Project Data, add styling to Logout button 
+- In Home or App component -> Get started button should direct to login page
+- If have time, remove home link in Project Data
