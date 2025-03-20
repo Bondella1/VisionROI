@@ -27,5 +27,5 @@ The MSAL library supports React 18, not 19. Hence we uninstalled React 19 and in
 
 # Tasks for Tahia
 - In Project Data, add styling to Logout button 
-- In Home or App component -> Get started button should direct to login page
-- If have time, remove home link in Project Data
+- In Home or App component -> Get started button should direct to login page (done)
+- If have time, remove home link in Project Data - least important
