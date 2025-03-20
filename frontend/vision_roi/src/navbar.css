@@ -1,0 +1,105 @@
+/* Navbar, including login and logout button in navbar */
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(90deg, #003580, #0056b3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* transition: all 0.3s ease-in-out; */
+  }
+  
+  /* added */
+  .navbar:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Title on the Left */
+  .navbar-title {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  /* Links and Button on the Right */
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #ffc107;
+  }
+  
+  /* Login Button in navbar*/
+  .login-button {
+    padding: 0.6rem 1.2rem;
+    background: #ffc107;
+    color: #003580;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .login-button:hover {
+    background: #ffb300;
+    transform: scale(1.05);
+  }
+  
+  /* logout styling */
+  .logout-button:hover {
+    background: #ffb300;
+    transform: scale(1.05);
+  }
+  .logout-button {
+    padding: 0.6rem 1.2rem;
+    background: #ffc107;
+    color: #003580;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .navbar-links {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+  
+    .login-button {
+        width: 100%;
+        text-align: center;
+    }
+  
+    .logout-button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
