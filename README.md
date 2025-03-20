@@ -21,3 +21,6 @@ The MSAL library supports React 18, not 19. Hence we uninstalled React 19 and in
 # To improve in future
 - Implement multifacet sign in -> work and school emails.
 - Add hierarchies, where based on your role, you are restricted or have access on viewing certain info.
+
+# Using Plotly-dash to display Data Visualizations
+- The code for this is found in app.py 
