@@ -1,0 +1,40 @@
+/* for login page/component styling */
+.login {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 25px;
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+  border-radius: 10px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Login button */
+.login button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button hover effect */
+.login button:hover {
+  background: linear-gradient(90deg, #0056b3, #003580);
+  transform: scale(1.05);
+}
+
+/* Responsive styling */
+@media (max-width: 400px) {
+  .login {
+      max-width: 95%;
+      padding: 20px;
+  }
+}
