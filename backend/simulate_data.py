@@ -4,6 +4,7 @@ import random
 from pydantic import BaseModel, Field
 from typing import List, Optional
 from azure.cosmos import exceptions
+from datetime import datetime, timedelta
 
 #pydantic model to verify dataset input
 class ROIProject(BaseModel):
@@ -15,6 +16,7 @@ class ROIProject(BaseModel):
     expected_revenue:List[float]
     duration_months:int
     roi: Optional[float] = Field(None, description="Calculated Roi as a percentage")
+    project_date: datetime
 
     #roi formula calculation
     def calculate_roi(self) -> float:
@@ -29,6 +31,9 @@ def generate_sample_project(project_id: int) -> ROIProject:
     operating_costs = [random.uniform(4000, 7000) for _ in range(duration)]
     expected_revenues = [random.uniform(8000, 12000) for _ in range(duration)]
 
+    days_ago = random.randint(30, 5 * 365)
+    project_date = datetime.now() - timedelta(days=days_ago)
+
     project = ROIProject(
         id=f"proj_{project_id}",
         project_id=f"project_id:03",
@@ -36,7 +41,8 @@ def generate_sample_project(project_id: int) -> ROIProject:
         initial_investment=initial_investment,
         operating_costs=operating_costs,
         expected_revenue=expected_revenues,
-        duration_months=duration
+        duration_months=duration,
+        project_date=project_date
     )
     project.calculate_roi()
     return project

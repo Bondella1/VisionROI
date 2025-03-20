@@ -1,3 +1,4 @@
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from dotenv import load_dotenv
@@ -5,10 +6,20 @@ from typing import List, Optional
 from azure.cosmos import exceptions
 from cosmos import container
 from simulate_data import ROIProject as Project  # Project model imported from simulate_data.py
+from starlette.middleware.wsgi import WSGIMiddleware
+#from app import app as dash_app
 
 load_dotenv()
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 
 # Create a new project
 @app.post("/projects/", response_model=Project)
@@ -78,3 +89,6 @@ def delete_project(project_id: str):
         return {"message": "Project deleted successfully"}
     except exceptions.CosmosHttpResponseError as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+#print(dash_app.server.url_map)
+#app.mount("/dash/", WSGIMiddleware(dash_app.server))

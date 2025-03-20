@@ -4,6 +4,8 @@ import dash
 from dash import dcc, html, Input, Output
 import plotly.express as px
 import pandas as pd
+from flask_cors import CORS
+import plotly.express as px
 
 # Import the Cosmos DB container from your cosmos module
 from cosmos import container
@@ -55,7 +57,9 @@ fig = px.bar(
 )
 
 # Initialize the Dash app.
-app = dash.Dash(__name__)
+app = dash.Dash(__name__,
+                requests_pathname_prefix="/",
+                routes_pathname_prefix="/")
 app.title = "ROI Calculator Dashboard"
 
 # Define the layout.
@@ -92,6 +96,12 @@ def display_project_details(selected_id):
     ])
     return details
 
+def add_security_headers(response):
+    response.headers['Content-Security-Policy'] = (
+        "default-src 'self'; frame-resources 'self' http://react-domain"
+    )
+
 if __name__ == '__main__':
-    # Run the Dash server (by default on http://127.0.0.1:8050)
-    app.run(debug=True)
+    app.run(debug=True, host="10.250.44.13", port=8050)
+
+CORS(app.server, origins=["react-domain"])
