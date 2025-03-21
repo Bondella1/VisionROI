@@ -7,7 +7,6 @@ const NavBar = ({ onLoginClick, isAuthenticated, username, onLogout }) => {
         <a href="/">Home</a>
         {isAuthenticated ? (
           <div className="user-info">
-              <span>Welcome, {username}</span>
               <button onClick={onLogout} className="logout-button">Logout</button>
           </div>
         ) : (
