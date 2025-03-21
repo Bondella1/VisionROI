@@ -1,5 +1,8 @@
 # VisionROI
 
+# Demo Video
+[Watch Quick Demo](https://screenapp.io/app/#/shared/7z_X8TFxsr)
+
 # About Azure AD
 Once student subscription expires, the azure service will be disabled unless you are in pay as you go subscription. You won't be charged unles you upgrade to a paid plan.
 Azure AD authentication for localhost is free as long as you’re within the free tier limits.
@@ -25,7 +28,4 @@ The MSAL library supports React 18, not 19. Hence we uninstalled React 19 and in
 # Using Plotly-dash to display Data Visualizations
 - The code for this is found in app.py 
 
-# Tasks for Tahia
-- In Project Data, add styling to Logout button (done)
-- In Home or App component -> Get started button should direct to login page (done)
-- If have time, remove home link in Project Data - least important
+
