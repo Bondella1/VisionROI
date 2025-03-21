@@ -1,21 +1,4 @@
-# What is VisionROI?
-VisionROI is a powerful data visualization tool designed to help businesses and researchers track projects and gain actionable insights for project success. It provides insightful visual representations of data, enabling better decision-making and strategy optimization.
-
-# Target Users
-- Business owners
-- Managers
-- Researchers
-- Startups & enterprises
-
-# Key Benefits
-- Clear & Intuitive Insights For Project Success
-- Efficiency & ROI Optimization: Helps users make data-driven decisions to maximize their return on investment.
-  
-VisionROI simplifies data analysis, making it accessible to everyone. Start making smarter decisions today!
-
-# Demo Video
-[Watch Quick Demo](https://screenapp.io/app/#/shared/7z_X8TFxsr)
-Recorded with ScreenApp -> screenapp.io
+# VisionROI
 
 # About Azure AD
 Once student subscription expires, the azure service will be disabled unless you are in pay as you go subscription. 
@@ -43,3 +26,11 @@ The MSAL library supports React 18, not 19. Hence, we uninstalled React 19 and i
 # To improve in future
 - Implement multifacet sign in -> allow work and school emails.
 - Add hierarchies, where based on your role, you are restricted or have access on viewing certain info.
+
+# Using Plotly-dash to display Data Visualizations
+- The code for this is found in app.py 
+
+# Tasks for Tahia
+- In Project Data, add styling to Logout button (done)
+- In Home or App component -> Get started button should direct to login page (done)
+- If have time, remove home link in Project Data - least important
