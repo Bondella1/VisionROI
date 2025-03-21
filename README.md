@@ -1,5 +1,17 @@
-# VisionROI
+# What is VisionROI?
+VisionROI is a powerful data visualization tool designed to help businesses and researchers track projects and gain actionable insights for project success. It provides insightful visual representations of data, enabling better decision-making and strategy optimization.
 
+# Target Users
+- Business owners
+- Managers
+- Researchers
+- Startups & enterprises
+
+# Key Benefits
+- Clear & Intuitive Insights For Project Success
+- Efficiency & ROI Optimization: Helps users make data-driven decisions to maximize their return on investment.
+- 
+VisionROI simplifies data analysis, making it accessible to everyone. Start making smarter decisions today!
 
 # Demo Video
 [Watch Quick Demo](https://screenapp.io/app/#/shared/7z_X8TFxsr)
